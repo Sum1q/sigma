@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>._.</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ffd6e7, #fff0f5);
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.container {
+    margin-top: 100px;
+}
+
+h1 {
+    font-size: 40px;
+    color: #ff2e63;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#yesBtn {
+    background-color: #e07f98;
+    color: white;
+}
+
+#noBtn {
+    background-color: #444;
+    color: white;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+#letter {
+    display: none;
+    max-width: 700px;
+    margin: auto;
+    padding: 20px;
+    font-size: 20px;
+    color: #333;
+}
+
+img {
+    width: 250px;
+    border-radius: 15px;
+    margin: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container" id="main">
+    <h1>Will you be my Valentine? </h1>
+
+    <button id="yesBtn" onclick="showLetter()">Yes</button>
+    <button id="noBtn" onclick="spawnYes()">No</button>
+</div>
+
+<div id="letter">
+    <h1>Good boyyy</h1>
+
+    <p>
+    Dear James
+    This message is not just a love letter, its about
+    how much i love how much i care and how much light
+    u brought into my life. May 12 2025 was the day we started
+    nelieving and dating eachother again but this time
+    it actually worked. I used to be afraid if you would leave me 
+    for someone else again but i was wrong. You made sure you will never 
+    repeat the same mistake ever again, you promised me, you believed, you cared.
+    Thats what makes you special person to me. Many times i have pushed you away
+    you always made sure to make me feel safe and believed again. Even tho there 
+    were misunderstandings between us, even tho there was times i would be quiet
+    and not talk or reply because of my avoidance, even tho i had trust issues, you
+    never ever broke the promise and did everything for me, ive noticed ALOT. You stopped your 
+    bad habits like drinking coffee everyday was bad yk for ur health and you actually listened to me
+    you stopped caring about others opinion about our relationship, you learned coding just to make
+    me happy and made so cute website on our 7th month anniversary, you always found a way to make me laugh
+    you were always there when i was sad, or upset, or angry,you also learned guitar, you would study with me or watch me study,
+    and it paid off also you got high honors, if you thought i never noticed ive always noticed my love.
+    ive always been so proud of you baby maybe to you people doesnt notices how hard you try but to me 
+    ive always noticed since you made that promise. You promised to prove me that you will change and do better
+    you even started playing basketball with ur friends or anything. And just so you know i will alwayd will be here
+    supporting you every my dear husband.
+    Sincerely your loving wife ^^ Nandinsuvd
+</div>
+
+<script>
+function spawnYes() {
+
+    const btn = document.createElement("button");
+    btn.innerText = "Yes ";
+    btn.style.position = "absolute";
+    btn.style.left = Math.random() * window.innerWidth + "px";
+    btn.style.top = Math.random() * window.innerHeight + "px";
+    btn.style.backgroundColor = "#ff2e63";
+    btn.style.color = "white";
+
+    btn.onclick = showLetter;
+
+    document.body.appendChild(btn);
+}
+
+function showLetter() {
+
+    document.getElementById("main").style.display = "none";
+    document.getElementById("letter").style.display = "block";
+
+}
+</script>
+
+</body>
+</html>
